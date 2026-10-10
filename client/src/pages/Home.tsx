@@ -20,7 +20,7 @@ import {
 
 const heroImage = "/manus-storage/async-images/Agk3oJ8Vw01SfBRzygsML3/image-1.webp";
 const careImage = "/manus-storage/async-images/Agk3oJ8Vw01SfBRzygsML3/image-2.webp";
-const communityImage = "/manus-storage/async-images/Agk3oJ8Vw01SfBRzygsML3/image-3.webp";
+const communityImage = "/manus-storage/4672_9244ab9e.jpg";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -182,7 +182,7 @@ export default function Home() {
         <section className="value-section section-pad">
           <div className="value-grid">
             <div className="value-copy reveal"><span className="section-number">03 — O nosso compromisso</span><h2>Rigor no que fazemos.<br /><em>Calma na forma como cuidamos.</em></h2><p>Da primeira pergunta ao último detalhe, juntamos conhecimento técnico e proximidade para que se sinta acompanhado. Porque cuidar bem também é explicar, ouvir e estar disponível.</p><div className="value-points"><div><Check size={16} /><span>Orientação responsável</span></div><div><Check size={16} /><span>Atendimento com privacidade</span></div><div><Check size={16} /><span>Presença perto de si</span></div></div></div>
-            <div className="value-aside reveal"><div className="value-image"><img src={communityImage} alt="Entrada de uma farmácia de bairro em Cabinda" loading="lazy" /></div><div className="value-caption"><span>Uma porta aberta<br />para a sua saúde.</span><MapPin size={18} /></div></div>
+            <div className="value-aside reveal"><div className="value-image"><img src={communityImage} alt="Fachada real da Farmácia JMAMU em Cabinda" loading="lazy" /></div><div className="value-caption"><span>Uma porta aberta<br />para a sua saúde.</span><MapPin size={18} /></div></div>
           </div>
         </section>
 
