@@ -18,7 +18,7 @@ import {
   X,
 } from "lucide-react";
 
-const heroImage = "/manus-storage/async-images/Agk3oJ8Vw01SfBRzygsML3/image-1.webp";
+const heroImage = "/manus-storage/4670_7f874899.jpg";
 const careImage = "/manus-storage/async-images/Agk3oJ8Vw01SfBRzygsML3/image-2.webp";
 const communityImage = "/manus-storage/4672_9244ab9e.jpg";
 
@@ -145,7 +145,7 @@ export default function Home() {
               <div className="hero-meta"><span>ABERTO TODOS OS DIAS</span><span className="meta-dot" /><span>07H30 — 22H00</span></div>
             </div>
             <div className="hero-image-wrap">
-              <div className="hero-image-frame"><img src={heroImage} alt="Farmacêutica a atender numa farmácia comunitária" fetchPriority="high" /></div>
+              <div className="hero-image-frame"><img src={heroImage} alt="Interior da Farmácia JMAMU com balcão e prateleiras de produtos de saúde" fetchPriority="high" /></div>
               <div className="hero-image-caption"><span>01 / 03</span><span>Saúde com uma relação humana</span></div>
               <div className="hero-side-note"><span className="vertical-text">FARMÁCIA JMAMU · CABINDA</span></div>
             </div>

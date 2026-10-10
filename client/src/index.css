@@ -55,7 +55,7 @@ h1 em, h2 em { color: var(--teal-light); font-style: normal; }
 .hero-image-wrap { position: relative; align-self: stretch; display: flex; align-items: center; padding: 28px 0 0 10px; animation: heroImageIn 1.2s .25s both; }
 .hero-image-frame { height: min(68vh, 650px); width: 100%; position: relative; overflow: hidden; }
 .hero-image-frame::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(23,34,77,.23), transparent 45%); pointer-events: none; }
-.hero-image-frame img { height: 100%; width: 100%; object-fit: cover; object-position: 58% center; filter: saturate(.84); }
+.hero-image-frame img { height: 100%; width: 100%; object-fit: cover; object-position: 58% center; filter: saturate(.84); animation: heroPan 11s ease-in-out infinite alternate; transform-origin: 56% 50%; }
 .hero-image-caption { position: absolute; bottom: 2px; left: 25px; right: 0; display: flex; justify-content: space-between; color: rgba(255,255,255,.64); font-size: 10px; letter-spacing: .06em; }
 .hero-side-note { position: absolute; right: -47px; top: 46%; height: 120px; display: flex; align-items: center; }
 .vertical-text { color: rgba(255,255,255,.36); font-size: 9px; letter-spacing: .17em; transform: rotate(90deg); white-space: nowrap; }
@@ -176,6 +176,7 @@ h1 em, h2 em { color: var(--teal-light); font-style: normal; }
 @keyframes headerIn { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes heroCopyIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes heroImageIn { from { opacity: 0; transform: translateX(24px); clip-path: inset(0 0 0 100%); } to { opacity: 1; transform: translateX(0); clip-path: inset(0 0 0 0); } }
+@keyframes heroPan { 0% { transform: scale(1.01) translate3d(0, 0, 0); } 100% { transform: scale(1.075) translate3d(-1.2%, -1%, 0); } }
 
 @media (max-width: 1050px) {
   .desktop-nav { gap: 22px; }
