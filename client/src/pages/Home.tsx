@@ -19,7 +19,7 @@ const heroImage = "/manus-storage/jmamu-hero_c8ab2fc5.webp";
 const careImage = "/manus-storage/async-images/Agk3oJ8Vw01SfBRzygsML3/image-2.webp";
 const communityImage = "/manus-storage/jmamu-facade_799c38bb.webp";
 const secondSpaceImage = "/manus-storage/jmamu-second-space_2c9bb662.webp";
-const logoImage = "/manus-storage/logo-jmamu_5bd4264e.webp";
+const logoImage = "/manus-storage/logo-jmamu-transparent_83f6aa39.png";
 const whatsappLink = "https://wa.me/244930242472?text=Ol%C3%A1%20Farm%C3%A1cia%20JMAMU%2C%20preciso%20de%20uma%20informa%C3%A7%C3%A3o.";
 const legalName = "JMAMU COMÉRCIO GERAL E PRESTAÇÃO DE SERVIÇOS (SU),Lda";
 
