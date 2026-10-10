@@ -21,6 +21,7 @@ const communityImage = "/manus-storage/jmamu-facade_799c38bb.webp";
 const secondSpaceImage = "/manus-storage/jmamu-second-space_2c9bb662.webp";
 const logoImage = "/manus-storage/logo-jmamu_5bd4264e.webp";
 const whatsappLink = "https://wa.me/244930242472?text=Ol%C3%A1%20Farm%C3%A1cia%20JMAMU%2C%20preciso%20de%20uma%20informa%C3%A7%C3%A3o.";
+const legalName = "JMAMU COMÉRCIO GERAL E PRESTAÇÃO DE SERVIÇOS (SU),Lda";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -105,9 +106,9 @@ export default function Home() {
   return (
     <div className="site-shell">
       <header className={`site-header ${isVisible ? "header-ready" : ""}`}>
-        <a className="brand" href="#home" aria-label="Farmácia JMAMU — início" onClick={() => setMenuOpen(false)}>
+        <a className="brand" href="#home" aria-label={`${legalName} — início`} onClick={() => setMenuOpen(false)}>
           <span className="brand-mark brand-logo-mark" aria-hidden="true"><img src={logoImage} alt="" /></span>
-          <span className="brand-copy"><strong>JMAMU</strong><small>(SU), Lda.</small></span>
+          <span className="brand-copy"><strong>{legalName}</strong></span>
         </a>
         <nav className="desktop-nav" aria-label="Navegação principal">
           {navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
@@ -205,7 +206,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="footer-top"><a className="brand brand-footer" href="#home"><span className="brand-mark brand-logo-mark" aria-hidden="true"><img src={logoImage} alt="" /></span><span className="brand-copy"><strong>JMAMU</strong><small>(SU), Lda.</small></span></a><p>Saúde com uma relação humana.<br />Cabinda, Angola.</p><div className="footer-nav">{navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Farmácia JMAMU (SU), Lda.</span><span>Feito para cuidar mais perto.</span></div></footer>
+      <footer className="site-footer"><div className="footer-top"><a className="brand brand-footer" href="#home"><span className="brand-mark brand-logo-mark" aria-hidden="true"><img src={logoImage} alt="" /></span><span className="brand-copy"><strong>{legalName}</strong></span></a><p>Saúde com uma relação humana.<br />Cabinda, Angola.</p><div className="footer-nav">{navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} {legalName}</span><span>Feito para cuidar mais perto.</span></div></footer>
 
       <a className="whatsapp-float" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Falar com a Farmácia JMAMU pelo WhatsApp"><MessageCircle size={21} /><span>WhatsApp</span></a>
     </div>
