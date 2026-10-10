@@ -3,7 +3,9 @@ import {
   Check,
   Cross,
   Clock3,
+  Facebook,
   HeartPulse,
+  Instagram,
   Mail,
   MapPin,
   Menu,
@@ -206,7 +208,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="footer-top"><a className="brand brand-footer" href="#home"><span className="brand-mark brand-logo-mark" aria-hidden="true"><img src={logoImage} alt="" /></span><span className="brand-copy"><strong>{legalName}</strong></span></a><p>Saúde com uma relação humana.<br />Cabinda, Angola.</p><div className="footer-nav">{navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} {legalName}</span><span>Feito para cuidar mais perto.</span></div></footer>
+      <footer className="site-footer"><div className="footer-top"><a className="brand brand-footer" href="#home"><span className="brand-mark brand-logo-mark" aria-hidden="true"><img src={logoImage} alt="" /></span><span className="brand-copy"><strong>{legalName}</strong></span></a><p>Saúde com uma relação humana.<br />Cabinda, Angola.</p><div className="footer-nav">{navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</div><div className="social-links" aria-label="Redes sociais"><a href="https://www.facebook.com/farmaciajmamu" target="_blank" rel="noreferrer" aria-label="Facebook da Farmácia JMAMU"><Facebook size={18} /></a><a href="https://www.instagram.com/farmaciajmamu" target="_blank" rel="noreferrer" aria-label="Instagram da Farmácia JMAMU"><Instagram size={18} /></a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} {legalName}</span><span>Feito para cuidar mais perto.</span></div></footer>
 
       <a className="whatsapp-float" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Falar com a Farmácia JMAMU pelo WhatsApp"><MessageCircle size={21} /><span>WhatsApp</span></a>
     </div>

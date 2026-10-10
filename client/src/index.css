@@ -170,6 +170,9 @@ h1 em, h2 em { color: var(--teal-light); font-style: normal; }
 .footer-top > p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
 .footer-nav { justify-self: end; display: flex; gap: 28px; }
 .footer-nav a { font-size: 11px; }
+.social-links { display: flex; gap: 10px; align-items: center; }
+.social-links a { width: 34px; height: 34px; display: grid; place-items: center; color: var(--navy); border: 1px solid var(--line); border-radius: 50%; transition: color .25s ease, background .25s ease, border-color .25s ease; }
+.social-links a:hover { color: white; background: var(--navy); border-color: var(--navy); }
 .footer-bottom { padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; color: #98a0ad; font-size: 10px; letter-spacing: .03em; }
 .whatsapp-float { position: fixed; z-index: 15; right: 25px; bottom: 25px; min-width: 48px; height: 48px; padding: 0 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--teal); color: var(--navy); border-radius: 28px; box-shadow: 0 12px 25px rgba(23,34,77,.2); font-size: 11px; font-weight: 800; transition: transform .25s ease, background .25s ease; }
 .whatsapp-float:hover { transform: translateY(-4px); background: var(--teal-light); }
@@ -247,9 +250,13 @@ h1 em, h2 em { color: var(--teal-light); font-style: normal; }
   .contact-section { padding: 80px 20px; }
   .contact-inner { margin-top: 0; }
   .contact-copy h2 { font-size: clamp(43px, 12vw, 60px); }
-  .footer-top { grid-template-columns: 1fr 1fr; gap: 35px 20px; padding-bottom: 46px; }
-  .footer-top > p { grid-column: 1 / -1; grid-row: 2; }
-  .footer-nav { grid-column: 2; grid-row: 1; justify-self: end; display: grid; gap: 12px; text-align: right; }
+  .footer-top { display: flex; flex-direction: column; gap: 25px; padding-bottom: 46px; min-width: 0; }
+  .footer-top > p { order: 2; }
+  .footer-nav { order: 3; align-self: flex-start; justify-self: initial; display: flex; flex-wrap: wrap; gap: 12px 20px; text-align: left; }
+  .social-links { order: 4; }
+  .brand-footer { max-width: 100%; align-items: flex-start; }
+  .brand-footer .brand-copy { max-width: calc(100vw - 90px); }
+  .brand-footer .brand-copy strong { font-size: 10px; overflow-wrap: anywhere; }
   .footer-bottom { gap: 12px; flex-direction: column; }
   .whatsapp-float { right: 17px; bottom: 17px; }
 }
