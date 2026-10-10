@@ -18,7 +18,9 @@ import {
 const heroImage = "/manus-storage/jmamu-hero_c8ab2fc5.webp";
 const careImage = "/manus-storage/async-images/Agk3oJ8Vw01SfBRzygsML3/image-2.webp";
 const communityImage = "/manus-storage/jmamu-facade_799c38bb.webp";
+const secondSpaceImage = "/manus-storage/jmamu-second-space_2c9bb662.webp";
 const logoImage = "/manus-storage/logo-jmamu_5bd4264e.webp";
+const whatsappLink = "https://wa.me/244930242472?text=Ol%C3%A1%20Farm%C3%A1cia%20JMAMU%2C%20preciso%20de%20uma%20informa%C3%A7%C3%A3o.";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -58,7 +60,7 @@ const services = [
 const locations = [
   {
     label: "Farmácia 01",
-    name: "Cabassango",
+    name: "Simulambuco",
     address: ["Subida da praça do Cabassango", "Bairro Simulambuco", "Município de Liambo - Cabinda"],
     hours: "07h30 — 21h00",
     query: "Subida da praça do Cabassango, Simulambuco, Cabinda",
@@ -194,18 +196,18 @@ export default function Home() {
         <section className="locations-section section-pad" id="localizacoes">
           <div className="location-header reveal"><span className="section-number">05 — Onde nos encontra</span><h2>Duas localizações.<br /><em>A mesma proximidade.</em></h2><p>Escolha o ponto mais conveniente para si. Em ambas as farmácias, a nossa equipa está pronta para o receber.</p></div>
           <div className="locations-grid">
-            {locations.map((location, index) => <article className="location-card reveal" key={location.label}><div className="location-card-top"><span>{location.label}</span><span>0{index + 1}</span></div><h3>{location.name}</h3><div className="location-address"><MapPin size={18} /><div>{location.address.map((line) => <span key={line}>{line}</span>)}</div></div><div className="location-hours"><Clock3 size={18} /><div><small>Horário de atendimento</small><strong>{location.hours}</strong></div></div><a className="location-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.query)}`} target="_blank" rel="noreferrer">Ver no mapa</a></article>)}
+            {locations.map((location, index) => <article className="location-card reveal" key={location.label}>{index === 1 && <div className="location-photo"><img src={secondSpaceImage} alt="Fachada da segunda Farmácia JMAMU na Rua de Timor" loading="lazy" decoding="async" /></div>}<div className="location-card-top"><span>{location.label}</span><span>0{index + 1}</span></div><h3>{location.name}</h3><div className="location-address"><MapPin size={18} /><div>{location.address.map((line) => <span key={line}>{line}</span>)}</div></div><div className="location-hours"><Clock3 size={18} /><div><small>Horário de atendimento</small><strong>{location.hours}</strong></div></div><a className="location-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.query)}`} target="_blank" rel="noreferrer">Ver no mapa</a></article>)}
           </div>
         </section>
 
         <section className="contact-section" id="contactos">
-          <div className="contact-inner reveal"><div className="contact-copy"><span className="section-number">06 — Contactos</span><h2>Tem uma pergunta?<br /><em>Estamos por perto.</em></h2><p>Fale diretamente com a equipa JMAMU. Teremos todo o gosto em ajudar.</p></div><div className="contact-details"><a href="tel:+244930242472" className="contact-detail"><span className="detail-icon"><Phone size={18} /></span><span><small>Ligue-nos</small><strong>930 242 472</strong></span></a><a href="mailto:geral@farmaciajmamu.com" className="contact-detail"><span className="detail-icon"><Mail size={18} /></span><span><small>Escreva-nos</small><strong>geral@farmaciajmamu.com</strong></span></a><a href="https://wa.me/244930242472" target="_blank" rel="noreferrer" className="contact-detail"><span className="detail-icon"><MessageCircle size={18} /></span><span><small>WhatsApp</small><strong>Enviar mensagem</strong></span></a></div></div>
+          <div className="contact-inner reveal"><div className="contact-copy"><span className="section-number">06 — Contactos</span><h2>Tem uma pergunta?<br /><em>Estamos por perto.</em></h2><p>Fale diretamente com a equipa JMAMU. Teremos todo o gosto em ajudar.</p></div><div className="contact-details"><a href="tel:+244930242472" className="contact-detail"><span className="detail-icon"><Phone size={18} /></span><span><small>Ligue-nos</small><strong>930 242 472</strong></span></a><a href="mailto:geral@farmaciajmamu.com" className="contact-detail"><span className="detail-icon"><Mail size={18} /></span><span><small>Escreva-nos</small><strong>geral@farmaciajmamu.com</strong></span></a><a href={whatsappLink} target="_blank" rel="noreferrer" className="contact-detail"><span className="detail-icon"><MessageCircle size={18} /></span><span><small>WhatsApp</small><strong>Falar connosco</strong></span></a></div></div>
         </section>
       </main>
 
       <footer className="site-footer"><div className="footer-top"><a className="brand brand-footer" href="#home"><span className="brand-mark brand-logo-mark" aria-hidden="true"><img src={logoImage} alt="" /></span><span className="brand-copy"><strong>JMAMU</strong><small>(SU), Lda.</small></span></a><p>Saúde com uma relação humana.<br />Cabinda, Angola.</p><div className="footer-nav">{navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Farmácia JMAMU (SU), Lda.</span><span>Feito para cuidar mais perto.</span></div></footer>
 
-      <a className="whatsapp-float" href="https://wa.me/244930242472" target="_blank" rel="noreferrer" aria-label="Falar com a Farmácia JMAMU pelo WhatsApp"><MessageCircle size={21} /></a>
+      <a className="whatsapp-float" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Falar com a Farmácia JMAMU pelo WhatsApp"><MessageCircle size={21} /><span>WhatsApp</span></a>
     </div>
   );
 }

@@ -134,6 +134,9 @@ h1 em, h2 em { color: var(--teal-light); font-style: normal; }
 .locations-grid { max-width: 1120px; margin: 80px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(255,255,255,.18); }
 .location-card { padding: 31px 31px 33px; min-height: 405px; background: var(--navy); display: flex; flex-direction: column; transition: background .3s ease; }
 .location-card:hover { background: var(--navy-soft); }
+.location-photo { height: 145px; margin: -31px -31px 25px; overflow: hidden; }
+.location-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.82); transition: transform .6s ease; }
+.location-card:hover .location-photo img { transform: scale(1.04); }
 .location-card-top { display: flex; justify-content: space-between; color: var(--teal-light); text-transform: uppercase; letter-spacing: .15em; font-size: 9px; font-weight: 700; }
 .location-card h3 { margin: 59px 0 27px; color: white; font-family: 'Manrope', sans-serif; font-size: 38px; letter-spacing: -.06em; }
 .location-address, .location-hours { display: flex; gap: 13px; color: rgba(255,255,255,.78); }
@@ -167,7 +170,7 @@ h1 em, h2 em { color: var(--teal-light); font-style: normal; }
 .footer-nav { justify-self: end; display: flex; gap: 28px; }
 .footer-nav a { font-size: 11px; }
 .footer-bottom { padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; color: #98a0ad; font-size: 10px; letter-spacing: .03em; }
-.whatsapp-float { position: fixed; z-index: 15; right: 25px; bottom: 25px; width: 48px; height: 48px; display: grid; place-items: center; background: var(--teal); color: var(--navy); border-radius: 50%; box-shadow: 0 12px 25px rgba(23,34,77,.2); transition: transform .25s ease, background .25s ease; }
+.whatsapp-float { position: fixed; z-index: 15; right: 25px; bottom: 25px; min-width: 48px; height: 48px; padding: 0 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--teal); color: var(--navy); border-radius: 28px; box-shadow: 0 12px 25px rgba(23,34,77,.2); font-size: 11px; font-weight: 800; transition: transform .25s ease, background .25s ease; }
 .whatsapp-float:hover { transform: translateY(-4px); background: var(--teal-light); }
 
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .75s ease, transform .75s ease; }
