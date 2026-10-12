@@ -78,11 +78,11 @@ h1 em, h2 em { color: var(--teal-light); font-style: normal; }
 .large-intro { max-width: 490px; margin: 0 0 32px; font-family: inherit; font-size: clamp(21px, 2.3vw, 30px); line-height: 1.22; letter-spacing: -.04em; }
 .accordion { border-top: 1px solid var(--line); }
 .accordion-item { border-bottom: 1px solid var(--line); }
-.accordion-item button { width: 100%; padding: 20px 0; display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 10px; text-align: left; background: none; border: 0; color: var(--navy); font-size: 14px; font-weight: 700; }
+.accordion-item button { width: 100%; padding: 20px 0; display: block; text-align: left; background: none; border: 0; color: var(--navy); font-size: 14px; font-weight: 700; }
 .accordion-index { color: var(--teal); font-size: 10px; letter-spacing: .08em; }
 .accordion-open button { color: var(--teal); }
 .accordion-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease; }
-.accordion-panel p { overflow: hidden; margin: 0; padding-left: 52px; color: var(--muted); line-height: 1.65; font-size: 13px; }
+.accordion-panel p { overflow: hidden; margin: 0; color: var(--muted); line-height: 1.65; font-size: 13px; }
 .accordion-open .accordion-panel { grid-template-rows: 1fr; }
 .accordion-open .accordion-panel p { padding-bottom: 21px; }
 .transition-line { display: flex; align-items: center; justify-content: space-between; margin: 29px 0 0; color: var(--teal); font-size: 12px; font-weight: 700; }

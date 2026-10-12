@@ -62,14 +62,14 @@ const services = [
 
 const locations = [
   {
-    label: "Farmácia 01",
+    label: "Localização",
     name: "Simulambuco",
     address: ["Subida da praça do Cabassango", "Bairro Simulambuco", "Município de Liambo - Cabinda"],
     hours: "07h30 — 21h00",
     query: "Subida da praça do Cabassango, Simulambuco, Cabinda",
   },
   {
-    label: "Farmácia 02",
+    label: "Localização",
     name: "Rua de Timor",
     address: ["Rua de Timor (Descida da Cadeia Civil)", "Município de Cabinda - Cabinda"],
     hours: "08h00 — 22h00",
@@ -149,7 +149,7 @@ export default function Home() {
             </div>
             <div className="hero-image-wrap">
               <div className="hero-image-frame"><img src={heroImage} alt="Interior da Farmácia JMAMU com balcão e prateleiras de produtos de saúde" fetchPriority="high" decoding="async" /></div>
-              <div className="hero-image-caption"><span>01 / 03</span><span>Saúde com uma relação humana</span></div>
+              <div className="hero-image-caption"><span>Saúde com uma relação humana</span></div>
               <div className="hero-side-note"><span className="vertical-text">FARMÁCIA JMAMU · CABINDA</span></div>
             </div>
           </div>
@@ -157,7 +157,7 @@ export default function Home() {
         </section>
 
         <section className="trust-section section-pad" id="confia">
-          <div className="section-intro reveal"><span className="section-number">01 — A nossa forma de cuidar</span><span className="accent-rule" /><h2>Quando precisa de cuidado,<br /><em>merece encontrar presença.</em></h2></div>
+          <div className="section-intro reveal"><span className="section-number">A nossa forma de cuidar</span><span className="accent-rule" /><h2>Quando precisa de cuidado,<br /><em>merece encontrar presença.</em></h2></div>
           <div className="trust-grid">
             <div className="trust-image reveal"><img src={careImage} alt="Profissional de farmácia a conversar com uma cliente" loading="lazy" decoding="async" /><div className="image-stamp"><span>JMAMU<br />DESDE SEMPRE<br />AO SEU LADO</span></div></div>
             <div className="trust-content reveal">
@@ -167,7 +167,7 @@ export default function Home() {
                   const open = openTrust === index;
                   return <div className={`accordion-item ${open ? "accordion-open" : ""}`} key={item.title} role="listitem">
                     <button type="button" aria-expanded={open} aria-controls={`trust-panel-${index}`} onClick={() => setOpenTrust(open ? -1 : index)}>
-                      <span className="accordion-index">0{index + 1}</span><span>{item.title}</span>
+                      <span>{item.title}</span>
                     </button>
                     <div id={`trust-panel-${index}`} className="accordion-panel" role="region"><p>{item.text}</p></div>
                   </div>;
@@ -179,32 +179,32 @@ export default function Home() {
         </section>
 
         <section className="statement-section" id="sobre">
-          <div className="statement-inner reveal"><span className="section-number">02 — Sobre a JMAMU</span><h2>Uma farmácia que conhece<br /><em>a vida à sua volta.</em></h2><p>Estamos em Cabinda para acompanhar pessoas reais, com respostas acessíveis e uma atenção que não termina no balcão.</p><a className="text-link" href="#contactos">Fale connosco</a></div>
+          <div className="statement-inner reveal"><span className="section-number">Sobre a JMAMU</span><h2>Uma farmácia que conhece<br /><em>a vida à sua volta.</em></h2><p>Estamos em Cabinda para acompanhar pessoas reais, com respostas acessíveis e uma atenção que não termina no balcão.</p><a className="text-link" href="#contactos">Fale connosco</a></div>
         </section>
 
         <section className="value-section section-pad">
           <div className="value-grid">
-            <div className="value-copy reveal"><span className="section-number">03 — O nosso compromisso</span><h2>Rigor no que fazemos.<br /><em>Calma na forma como cuidamos.</em></h2><p>Da primeira pergunta ao último detalhe, juntamos conhecimento técnico e proximidade para que se sinta acompanhado. Porque cuidar bem também é explicar, ouvir e estar disponível.</p><div className="value-points"><div><Check size={16} /><span>Orientação responsável</span></div><div><Check size={16} /><span>Atendimento com privacidade</span></div><div><Check size={16} /><span>Presença perto de si</span></div></div></div>
+            <div className="value-copy reveal"><span className="section-number">O nosso compromisso</span><h2>Rigor no que fazemos.<br /><em>Calma na forma como cuidamos.</em></h2><p>Da primeira pergunta ao último detalhe, juntamos conhecimento técnico e proximidade para que se sinta acompanhado. Porque cuidar bem também é explicar, ouvir e estar disponível.</p><div className="value-points"><div><Check size={16} /><span>Orientação responsável</span></div><div><Check size={16} /><span>Atendimento com privacidade</span></div><div><Check size={16} /><span>Presença perto de si</span></div></div></div>
             <div className="value-aside reveal"><div className="value-image"><img src={communityImage} alt="Fachada real da Farmácia JMAMU em Cabinda" loading="lazy" decoding="async" /></div><div className="value-caption"><span>Uma porta aberta<br />para a sua saúde.</span><MapPin size={18} /></div></div>
           </div>
         </section>
 
         <section className="services-section section-pad" id="servicos">
-          <div className="section-heading reveal"><span className="section-number">04 — O que encontra na JMAMU</span><h2>Cuidado para cada<br /><em>momento da vida.</em></h2><p>Uma seleção de serviços e produtos para responder ao que é essencial, com aconselhamento sempre que precisar.</p></div>
+          <div className="section-heading reveal"><span className="section-number">O que encontra na JMAMU</span><h2>Cuidado para cada<br /><em>momento da vida.</em></h2><p>Uma seleção de serviços e produtos para responder ao que é essencial, com aconselhamento sempre que precisar.</p></div>
           <div className="services-list">
-            {services.map((service) => { const Icon = service.icon; return <article className="service-item reveal" key={service.number}><div className="service-top"><span className="service-number">{service.number}</span><Icon size={24} strokeWidth={1.5} /></div><h3>{service.title}</h3><p>{service.text}</p><a href="#contactos" aria-label={`Saber mais sobre ${service.title}`}>Saber mais</a></article>; })}
+            {services.map((service) => { const Icon = service.icon; return <article className="service-item reveal" key={service.title}><div className="service-top"><Icon size={24} strokeWidth={1.5} /></div><h3>{service.title}</h3><p>{service.text}</p><a href="#contactos" aria-label={`Saber mais sobre ${service.title}`}>Saber mais</a></article>; })}
           </div>
         </section>
 
         <section className="locations-section section-pad" id="localizacoes">
-          <div className="location-header reveal"><span className="section-number">05 — Onde nos encontra</span><h2>Duas localizações.<br /><em>A mesma proximidade.</em></h2><p>Escolha o ponto mais conveniente para si. Em ambas as farmácias, a nossa equipa está pronta para o receber.</p></div>
+          <div className="location-header reveal"><span className="section-number">Onde nos encontra</span><h2>Duas localizações.<br /><em>A mesma proximidade.</em></h2><p>Escolha o ponto mais conveniente para si. Em ambas as farmácias, a nossa equipa está pronta para o receber.</p></div>
           <div className="locations-grid">
-            {locations.map((location, index) => <article className="location-card reveal" key={location.label}>{index === 1 && <div className="location-photo"><img src={secondSpaceImage} alt="Fachada da segunda Farmácia JMAMU na Rua de Timor" loading="lazy" decoding="async" /></div>}<div className="location-card-top"><span>{location.label}</span><span>0{index + 1}</span></div><h3>{location.name}</h3><div className="location-address"><MapPin size={18} /><div>{location.address.map((line) => <span key={line}>{line}</span>)}</div></div><div className="location-hours"><Clock3 size={18} /><div><small>Horário de atendimento</small><strong>{location.hours}</strong></div></div><a className="location-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.query)}`} target="_blank" rel="noreferrer">Ver no mapa</a></article>)}
+            {locations.map((location, index) => <article className="location-card reveal" key={location.label}>{index === 1 && <div className="location-photo"><img src={secondSpaceImage} alt="Fachada da segunda Farmácia JMAMU na Rua de Timor" loading="lazy" decoding="async" /></div>}<div className="location-card-top"><span>{location.label}</span></div><h3>{location.name}</h3><div className="location-address"><MapPin size={18} /><div>{location.address.map((line) => <span key={line}>{line}</span>)}</div></div><div className="location-hours"><Clock3 size={18} /><div><small>Horário de atendimento</small><strong>{location.hours}</strong></div></div><a className="location-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.query)}`} target="_blank" rel="noreferrer">Ver no mapa</a></article>)}
           </div>
         </section>
 
         <section className="contact-section" id="contactos">
-          <div className="contact-inner reveal"><div className="contact-copy"><span className="section-number">06 — Contactos</span><h2>Tem uma pergunta?<br /><em>Estamos por perto.</em></h2><p>Fale diretamente com a equipa JMAMU. Teremos todo o gosto em ajudar.</p></div><div className="contact-details"><a href="tel:+244930242472" className="contact-detail"><span className="detail-icon"><Phone size={18} /></span><span><small>Ligue-nos</small><strong>930 242 472</strong></span></a><a href="mailto:geral@farmaciajmamu.com" className="contact-detail"><span className="detail-icon"><Mail size={18} /></span><span><small>Escreva-nos</small><strong>geral@farmaciajmamu.com</strong></span></a><a href={whatsappLink} target="_blank" rel="noreferrer" className="contact-detail"><span className="detail-icon"><MessageCircle size={18} /></span><span><small>WhatsApp</small><strong>Falar connosco</strong></span></a></div></div>
+          <div className="contact-inner reveal"><div className="contact-copy"><span className="section-number">Contactos</span><h2>Tem uma pergunta?<br /><em>Estamos por perto.</em></h2><p>Fale diretamente com a equipa JMAMU. Teremos todo o gosto em ajudar.</p></div><div className="contact-details"><a href="tel:+244930242472" className="contact-detail"><span className="detail-icon"><Phone size={18} /></span><span><small>Ligue-nos</small><strong>930 242 472</strong></span></a><a href="mailto:geral@farmaciajmamu.com" className="contact-detail"><span className="detail-icon"><Mail size={18} /></span><span><small>Escreva-nos</small><strong>geral@farmaciajmamu.com</strong></span></a><a href={whatsappLink} target="_blank" rel="noreferrer" className="contact-detail"><span className="detail-icon"><MessageCircle size={18} /></span><span><small>WhatsApp</small><strong>Falar connosco</strong></span></a></div></div>
         </section>
       </main>
 
